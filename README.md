@@ -1,9 +1,13 @@
-$ 📐 Equations Used
+# SPDC in PPKTP
 
-$ Equation 1 – Refractive index squared (Y-axis)
-\[
+Simulation and report of temperature-dependent phase matching.
+
+## 📐 Equations Used
+
+### Equation 1 – Refractive index squared (Y-axis)
+$$
 n_y^2 = A_y + \frac{B_y \cdot \lambda^2}{\lambda^2 - C_y - D_y \cdot \lambda^2}
-\]
+$$
 
 **Y-axis Coefficients:**
 
@@ -16,10 +20,10 @@ n_y^2 = A_y + \frac{B_y \cdot \lambda^2}{\lambda^2 - C_y - D_y \cdot \lambda^2}
 
 ---
 
-$ Equation 2 – Refractive index squared (Z-axis)
-\[
+### Equation 2 – Refractive index squared (Z-axis)
+$$
 n_z^2 = A_z + \frac{B_z \cdot \lambda^2}{\lambda^2 - C_z - D_z \cdot \lambda^2}
-\]
+$$
 
 **Z-axis Coefficients:**
 
@@ -32,38 +36,38 @@ n_z^2 = A_z + \frac{B_z \cdot \lambda^2}{\lambda^2 - C_z - D_z \cdot \lambda^2}
 
 ---
 
-$ Equation 3 – Temperature derivative of \( n_y \)
-\[
+### Equation 3 – Temperature derivative of \( n_y \)
+$$
 \frac{dn_y}{dT} = (1.997\lambda^3 - 4.067\lambda^2 + 5.154\lambda - 5.425) \times 10^{-6}
-\]
+$$
 
 ---
 
-$ Equation 4 – Temperature derivative of \( n_z \)
-\[
+### Equation 4 – Temperature derivative of \( n_z \)
+$$
 \frac{dn_z}{dT} = (9.221\lambda^3 - 29.220\lambda^2 + 36.667\lambda - 1.897) \times 10^{-6}
-\]
+$$
 
 ---
 
-$ Equation 5 – Temperature-adjusted refractive index (Y-axis)
-\[
+### Equation 5 – Temperature-adjusted refractive index (Y-axis)
+$$
 n_{new,y} = n_y + \left( \frac{dn_y}{dT} \right) \cdot (T - 25.0)
-\]
+$$
 
 ---
 
-$ Equation 6 – Temperature-adjusted refractive index (Z-axis)
-\[
+### Equation 6 – Temperature-adjusted refractive index (Z-axis)
+$$
 n_{new,z} = n_z + \left( \frac{dn_z}{dT} \right) \cdot (T - 25.0)
-\]
+$$
 
 ---
 
-$ Equation 7 – Temperature-dependent grating period
-\[
+### Equation 7 – Temperature-dependent grating period
+$$
 \Lambda(T) = \Lambda_0 \cdot \left[ 1 + A(T - 25^\circ C) + B(T - 25^\circ C)^2 \right]
-\]
+$$
 
 **Constants:**
 
@@ -74,10 +78,10 @@ $ Equation 7 – Temperature-dependent grating period
 
 ---
 
-$ Equation 8 – Phase mismatch \( \Delta k \)
-\[
+### Equation 8 – Phase mismatch \( \Delta k \)
+$$
 \Delta k = \frac{2\pi n_y(\lambda_p)}{\lambda_p} - \frac{2\pi n_z(\lambda_s)}{\lambda_s} - \frac{2\pi n_y(\lambda_i)}{\lambda_i} - \frac{2\pi}{\Lambda(T)}
-\]
+$$
 
 **Clarifications:**
 - \( n_y(\lambda_p) \): from Equation 1 at \( \lambda_p \)  
@@ -88,14 +92,14 @@ $ Equation 8 – Phase mismatch \( \Delta k \)
 
 ---
 
-$ Equation 9 – Energy Conservation (wavelength relation)
-\[
+### Equation 9 – Energy Conservation (wavelength relation)
+$$
 \frac{1}{\lambda_p} = \frac{1}{\lambda_s} + \frac{1}{\lambda_i}
-\]
+$$
 
 ---
 
-$ 📊 Output
+## 📊 Output
 
 This simulator generates:
 
@@ -105,7 +109,7 @@ This simulator generates:
 
 ---
 
-$ 🗂️ Files
+## 🗂️ Files
 
 | File Name         | Description                                           |
 |------------------|-------------------------------------------------------|
@@ -115,7 +119,7 @@ $ 🗂️ Files
 
 ---
 
-$ ⚙️ Dependencies
+## ⚙️ Dependencies
 
 - Python 3.7+
 - NumPy
